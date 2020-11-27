@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 
 // Import Routes
 const authRoute = require('./routes/auth');
+const todoRoute = require('./routes/todo');
 
 //dotenv
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(express.json());
 
 // Routes Middleware
 app.use('/api', authRoute);
+app.use('/api', todoRoute);
 
 
 app.listen(3000, () => console.log('up and running!') )
